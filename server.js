@@ -1,8 +1,12 @@
+// const newrelic = require('newrelic');
+
+
 const express = require('express');
 const app = express();
-const morgan = require('morgan');
+// app.locals.newrelic = newrelic;
 
-app.use(morgan('dev'));
+// const morgan = require('morgan');
+// app.use(morgan('dev'));
 
 app.use('/rooms/:roomid', express.static(`${__dirname}/public/`));
 
@@ -23,7 +27,7 @@ app.get('/api/rooms/:roomid/carousel', (req, res) =>{
 
 // Description Redirection
 app.get('/api/rooms/:roomid/description', (req,res) => {
-  res.redirect(`http://18.222.4.195/api/rooms/${req.params.roomid}/description`);
+  res.redirect(`http://localhost:3002/api/rooms/${req.params.roomid}/description`);
 });
 
 // Booking Redirection
@@ -56,3 +60,4 @@ app.get('/rooms/images/:imagefile', (req,res) => {
 });
 
 app.listen(3000);
+console.log('proxy server launched on port 3k')
