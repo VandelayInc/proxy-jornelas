@@ -28,6 +28,8 @@
       <div id='listings'><img src='6.png'></div>
       <div class='bottom-bar'><img src='7.png'></div>
     </div>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 
     <!-- Stolen from Fred's example -->
     <!-- <script src="http://18.222.4.195:3001/photo-carousel.bundle.js"></script>
@@ -38,6 +40,11 @@
     <script src="http://localhost:3007/bundle.js"></script> -->
     <script src="http://localhost:3002/app-description.bundle.js"></script>
     <!-- End of stealing -->
-
+    <script>
+    ReactDOM.render(
+      React.createElement(Info),
+      document.getElementById('description-service')
+    );
+  </script>
   </body>
 </html>
