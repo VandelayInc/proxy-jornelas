@@ -36,7 +36,7 @@ app.get('/rooms/:id', function(req, res){
 });
 
 app.get('/api/rooms/:roomid/description', (req,res) => {
-  res.redirect(`http://localhost:3002/api/rooms/${req.params.roomid}/description`);
+  res.redirect(`http://18.144.1.208:3002/api/rooms/${req.params.roomid}/description`);
 });
 
 app.listen(port, () => {
