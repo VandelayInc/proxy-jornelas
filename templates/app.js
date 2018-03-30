@@ -1,4 +1,4 @@
-module.exports = (description, neighborhood) => `
+module.exports = (description, neighborhood, booking) => `
 <div class='full-listing-page'>
   <div class='top-bar'><img src='../../services/8.png'><img src='../../services/9.png'></div>
   <div class='pictures' id='photo-carousel-service'><img src='../../services/listing_photo.jpg'></div>
@@ -14,11 +14,12 @@ module.exports = (description, neighborhood) => `
       <div id='neighborhood'>${neighborhood}</div>
     </div>
 
-    <div class='booking' id='bookings-service'><img src='../../services/booking.png'></div>
+    <div class='booking' id='bookings-service'>${booking}<img src='../../services/booking.png'></div>
 
   </div>
 
   <div id='listings'><img src='../../services/6.png'></div>
   <div class='bottom-bar'><img src='../../services/7.png'></div>
 </div>
+  <script src="http://hackbnblb-691788977.us-west-1.elb.amazonaws.com/bundle.js"></script>
 `;

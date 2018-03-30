@@ -1,3 +1,4 @@
+const newrelic = require('newrelic');
 const express = require('express')
 // const morgan = require('morgan');
 const path = require('path');
@@ -36,14 +37,19 @@ app.get('/rooms/:roomid', function(req, res){
 });
 
 app.get('/api/rooms/:roomid/description', (req,res) => {
-  console.log("DESCRIPTION API CALL")
+  // console.log("DESCRIPTION API CALL")
   res.redirect(`http://loads-627649313.us-west-1.elb.amazonaws.com/api/rooms/${req.params.roomid}/description`);
 });
 
 app.get('/api/neighborhood/:roomid', (req, res) => {
-  console.log("NEIGHBORHOOD API CALL")
+  // console.log("NEIGHBORHOOD API CALL")
   res.redirect(`http://sdc-lb-1299428521.us-west-1.elb.amazonaws.com/api/neighborhood/${req.params.roomid}`);
 });
+
+app.get('/api/rooms/:roomid/bookings', (req, res) => {
+  // console.log("BOOKINGS API CALL")
+  res.redirect(`http://hackbnblb-691788977.us-west-1.elb.amazonaws.com/api/rooms/${req.params.roomid}/bookings`)
+})
 
 app.listen(port, () => {
   console.log(`server running at: http://localhost:${port}`)
