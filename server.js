@@ -26,7 +26,7 @@ const renderComponents = (components, props = {}) => {
   });
 }
 
-app.get('/rooms/:id', function(req, res){
+app.get('/rooms/:roomid', function(req, res){
   let components = renderComponents(services, {itemid: req.params.id});
   res.end(Layout(
     'Vandalay Inc',
@@ -36,7 +36,13 @@ app.get('/rooms/:id', function(req, res){
 });
 
 app.get('/api/rooms/:roomid/description', (req,res) => {
-  res.redirect(`http://18.144.1.208:3002/api/rooms/${req.params.roomid}/description`);
+  console.log("DESCRIPTION API CALL")
+  res.redirect(`http://loads-627649313.us-west-1.elb.amazonaws.com/api/rooms/${req.params.roomid}/description`);
+});
+
+app.get('/api/neighborhood/:roomid', (req, res) => {
+  console.log("NEIGHBORHOOD API CALL")
+  res.redirect(`http://sdc-lb-1299428521.us-west-1.elb.amazonaws.com/api/neighborhood/${req.params.roomid}`);
 });
 
 app.listen(port, () => {

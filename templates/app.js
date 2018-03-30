@@ -1,4 +1,4 @@
-module.exports = (description, reviews, bookings, neighborhood) => `
+module.exports = (description, neighborhood) => `
 <div class='full-listing-page'>
   <div class='top-bar'><img src='../../services/8.png'><img src='../../services/9.png'></div>
   <div class='pictures' id='photo-carousel-service'><img src='../../services/listing_photo.jpg'></div>
@@ -11,7 +11,7 @@ module.exports = (description, reviews, bookings, neighborhood) => `
       </div>
       <div id='reviews-service'><img src='../../services/3.png'></div>
       <div class='host'><img src='../../services/4.png'></div>
-      <div id='neighborhood'><img src='../../services/5.png'></div>
+      <div id='neighborhood'>${neighborhood}</div>
     </div>
 
     <div class='booking' id='bookings-service'><img src='../../services/booking.png'></div>

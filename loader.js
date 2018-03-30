@@ -31,6 +31,8 @@ const fetchBundles = (path, services, suffix = '', require = false) => {
                 require ? loadBundle(services, item, filename) : null;
               });
             });
+
+            
         } else {
           console.log('WARNING: Unknown fs error');
         }

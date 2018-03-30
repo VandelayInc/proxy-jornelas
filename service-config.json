@@ -1,3 +1,4 @@
 {
-  "Description": "http://18.144.1.208:3002/app-description.bundle"
+  "description-service": "http://loads-627649313.us-west-1.elb.amazonaws.com/app-description.bundle",
+  "Neighborhood": "http://sdc-lb-1299428521.us-west-1.elb.amazonaws.com/bundle"
 }
