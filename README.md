@@ -1,14 +1,15 @@
-# Wyatt's Hacknb Proxy Server
+# Proxy Server
 
-This is Wyatt's proxy server for the 'Hacknb' Front-End Capstone project.
+This server pulls in all related components into a single page.
+
+![alt text](https://i.imgur.com/Tia5ffal.png)
 
 ## Related Projects
 
-- [Neighborhood Map Project](https://github.com/The-Untouchables/neighborhood-map-service)
-- [Similar Listings](https://github.com/The-Untouchables/similar-listings-service)
-- [Reviews](https://github.com/The-Untouchables/reviews-service)
-- [Gallery](https://github.com/The-Untouchables/)
-- [Description](https://github.com/The-Untouchables/)
+- [Neighborhood](https://github.com/VandelayInc/neighborhood-map-service)
+- [Booking](https://github.com/VandelayInc/whitney-booking)
+- [Reviews](https://github.com/VandelayInc/reviews-service)
+- [Description](https://github.com/VandelayInc/description_service)
 
 ## Table of Contents
 
@@ -18,7 +19,7 @@ This is Wyatt's proxy server for the 'Hacknb' Front-End Capstone project.
 
 ## Usage
 
-> Some usage instructions
+HTML page is located at /rooms/:id
 
 ## Requirements
 
@@ -34,7 +35,6 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 From within the root directory:
 
 ```sh
-npm install -g webpack
 npm install
 ```
 
